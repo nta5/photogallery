@@ -1,3 +1,4 @@
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import javax.servlet.*;
 import java.io.*;
@@ -5,7 +6,7 @@ import java.sql.*;
 import java.util.Objects;
 import java.util.UUID;
 
-
+@WebServlet(urlPatterns={"/login"})
 public class LoginServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
